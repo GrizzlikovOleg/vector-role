@@ -25,18 +25,18 @@ Example Playbook
 ----------------
 
 ---
-- name: Install and configure Vector
-  hosts: your's hostname
-  become: true
-  roles:
+- name: Install and configure Vector  
+  hosts: your's hostname  
+  become: true  
+  roles:  
     - { role: GrizzlikovOleg.vector-role, vector_version: "latest", vector_config_path: "/opt/vector/config/vector.toml" }
 
 if you use req.yml
 
-- name: Install and configure Vector
-  hosts: your's hostname
-  gather_facts: true
-  roles:
+- name: Install and configure Vector  
+  hosts: your's hostname  
+  gather_facts: true  
+  roles:  
     - vector
 
 
